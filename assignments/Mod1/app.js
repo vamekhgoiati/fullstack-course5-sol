@@ -9,21 +9,19 @@
     $scope.message = '';
     $scope.textColor = '';
     $scope.checkLunch = function() {
-      let text = $scope.lunch.trim();
+      const text = $scope.lunch.trim();
       $scope.message = setMessage(text);
-      let color = getColor($scope.message);
+      const color = getColor($scope.message);
       $scope.textColor = color;
       $scope.backgroundColor = 'solid 1px ' + color;
     }
 
     function setMessage(text) {
-      if (text === '') {
+      const textArray = text.split(',').filter(c => c.trim());
+      if (!textArray.length) {
         return 'Please enter data first';
       }
-      if (text.split(',').length <= 3) {
-        return 'Enjoy!';
-      }
-      return 'Too much!';
+      return textArray.length <= 3 ? 'Enjoy!' : 'Too much!';
     }
 
     function getColor(message) {
