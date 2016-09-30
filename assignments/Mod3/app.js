@@ -34,14 +34,18 @@
     ctrl.nothingFound = false;
     ctrl.narrowItDown = function() {
       ctrl.found = [];
-      if (ctrl.searchTerm.trim() !== '') {
+      if (ctrl.searchTerm.trim() === '') {
+        ctrl.nothingFound = true;
+      }
+      else {
+        ctrl.nothingFound = false;
         MenuSearchService.getMatchedMenuItems(ctrl.searchTerm).then(
           function(result) {
             ctrl.found = result;
+            ctrl.nothingFound = (ctrl.found.length == 0);
           }
         );
       }
-      ctrl.nothingFound = (ctrl.found.length == 0);
     }
 
     ctrl.removeItem = function(index) {
