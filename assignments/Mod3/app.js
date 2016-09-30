@@ -25,24 +25,26 @@
 
   function FoundItemsDirectiveController() {
     var ctrl = this;
+
+    ctrl.isEmpty = function () {
+      return (ctrl.foundItems && ctrl.foundItems.length === 0);
+    }
   }
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
     var ctrl = this;
     ctrl.searchTerm = '';
-    ctrl.nothingFound = false;
     ctrl.narrowItDown = function() {
-      ctrl.found = [];
+      ctrl.found = null;
       if (ctrl.searchTerm.trim() === '') {
-        ctrl.nothingFound = true;
+        ctrl.found = [];
       }
       else {
         ctrl.nothingFound = false;
         MenuSearchService.getMatchedMenuItems(ctrl.searchTerm).then(
           function(result) {
             ctrl.found = result;
-            ctrl.nothingFound = (ctrl.found.length == 0);
           }
         );
       }
