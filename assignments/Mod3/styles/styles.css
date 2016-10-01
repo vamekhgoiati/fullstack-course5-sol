@@ -60,10 +60,7 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.error {
-  color: red;
-  font-weight: bold;
-  float: left;
-  margin-left: 10px;
-  margin-top: 5px;
+.alert {
+  position: relative;
+  top: 50px;
 }
