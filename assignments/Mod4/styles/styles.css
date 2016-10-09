@@ -16,3 +16,7 @@ ul {
 li {
   margin: 5px;
 }
+
+a > button {
+  background: transparent;
+}

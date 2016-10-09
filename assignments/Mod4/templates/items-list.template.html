@@ -1,4 +1,9 @@
-<div class="container">
-  <h2 class="bg-info">Category: {{ itemsCtrl.category }}</h2>
+<div class="container-fluid">
+  <div>
+    <h2 class="bg-info">Category: {{ itemsCtrl.category }}
+      <a ui-sref="categories"><button class="btn pull-right"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></a>
+    </h2>
+  </div>
+
   <items items="itemsCtrl.items"></items>
 </div>
