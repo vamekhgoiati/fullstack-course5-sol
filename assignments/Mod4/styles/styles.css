@@ -17,6 +17,10 @@ li {
   margin: 5px;
 }
 
+li > span {
+  margin-left: 5px;
+}
+
 a > button {
   background: transparent;
 }

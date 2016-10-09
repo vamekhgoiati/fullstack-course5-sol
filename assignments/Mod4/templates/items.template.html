@@ -1,5 +1,5 @@
 <ul>
   <li ng-repeat="item in $ctrl.items">
-      {{ item.name }} <span class="label label-warning">{{ item.price_small | currency }}</span> <span class="label label-danger">{{ item.price_large | currency }}</span>
+      {{ item.name }} <span class="label label-danger pull-right">{{ item.price_large | currency }}</span> <span class="label label-warning pull-right">{{ item.price_small | currency }}</span>
   </li>
 </ul>
