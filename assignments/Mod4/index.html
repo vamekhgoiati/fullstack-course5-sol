@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+  <head>
+    <title>Super Duper Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body>
+
+  <h1>Welcome to Super Duper Restaurant</h1>
+
+  <ui-view></ui-view>
+
+  <script src="angular.min.js"></script>
+  <script src="angular-ui-router.min.js"></script>
+  <script src="menuapp.module.js"></script>
+  <script src="data.module.js"></script>
+  <script src="routes.js"></script>
+
+  <script src="categories-list.controller.js"></script>
+  <script src="items-list.controller.js"></script>
+  <script src="categories.component.js"></script>
+  <script src="items.component.js"></script>
+  <script src="menudata.service.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div class="container">
+  <a ui-sref="home">
+    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+  </a>
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <h2 class="bg-primary">Categories</h2>
+      <categories categories="categoriesCtrl.categories"></categories>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <ui-view></ui-view>
+    </div>
+  </div>
+</div>

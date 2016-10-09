@@ -1,0 +1,18 @@
+tr:hover {
+  cursor: pointer;
+}
+body {
+  padding: 10px;
+}
+h2 {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul {
+  border: solid 1px #ddd;
+}
+
+li {
+  margin: 5px;
+}
